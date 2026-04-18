@@ -3,55 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>5RG Realty | Property Management — National City, CA</title>
+  <title>5RG Realty | Property Management</title>
   <meta name="description" content="Let our group of experts guide you to the right path. Property management, home buying, selling and more — National City, CA.">
-  <link rel="canonical" href="https://jca619.github.io/5RG-Front_end_dev/">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Ccircle cx='40' cy='40' r='38' stroke='%23921134' stroke-width='2' fill='%23080808'/%3E%3Ctext x='40' y='44' font-family='Georgia,serif' font-size='26' font-weight='700' text-anchor='middle' dominant-baseline='middle' fill='%23921134' letter-spacing='-1'%3E5RG%3C/text%3E%3C/svg%3E">
-  <!-- Open Graph -->
-  <meta property="og:type"        content="website">
-  <meta property="og:url"         content="https://jca619.github.io/5RG-Front_end_dev/">
-  <meta property="og:title"       content="5RG Realty | Property Management — National City, CA">
-  <meta property="og:description" content="Over 20 years of local expertise in property management, home buying, selling, short sales, and loan modifications. Serving National City &amp; San Diego.">
-  <meta property="og:site_name"   content="5RG Realty">
-  <!-- Twitter Card -->
-  <meta name="twitter:card"        content="summary">
-  <meta name="twitter:title"       content="5RG Realty | Property Management">
-  <meta name="twitter:description" content="Over 20 years of local real estate expertise in National City &amp; San Diego. Property management, home buying, selling, and more.">
-  <!-- Schema.org LocalBusiness -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "RealEstateAgent",
-    "name": "5RG Realty",
-    "alternateName": "5RG Realty Group",
-    "url": "https://jca619.github.io/5RG-Front_end_dev/",
-    "logo": "https://jca619.github.io/5RG-Front_end_dev/",
-    "description": "Property management, home buying, selling, short sales, loan modification, and commercial real estate in National City, CA.",
-    "telephone": "+16196566100",
-    "email": "info@5rgroup.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "2449 E. Plaza Blvd. Ste. C",
-      "addressLocality": "National City",
-      "addressRegion": "CA",
-      "postalCode": "91950",
-      "addressCountry": "US"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 32.6781,
-      "longitude": -117.0892
-    },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-      "opens": "09:00",
-      "closes": "17:00"
-    },
-    "areaServed": ["National City, CA", "San Diego, CA"],
-    "foundingDate": "2004"
-  }
-  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Sora:wght@300;400;500&display=swap" rel="stylesheet">
@@ -74,9 +27,9 @@
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    body { font-family: var(--font-b); background: var(--white); color: var(--ink); overflow-x: hidden; }
+    body { font-family: var(--font-b); background: var(--white); color: var(--ink); overflow-x: hidden; cursor: none; }
     a { color: inherit; text-decoration: none; }
-    button { font-family: inherit; border: none; background: none; }
+    button { font-family: inherit; cursor: none; border: none; background: none; }
     img { display: block; max-width: 100%; }
 
     /* CURSOR */
@@ -198,9 +151,8 @@
 
     /* Tagline strip — bottom right, over image */
     .h-strip {
-      display:none; /* hidden — replaced by right-side action cards */
       position:absolute;bottom:clamp(2.5rem,5vh,4.5rem);right:var(--pad);
-      flex-direction:column;gap:.5rem;align-items:flex-end;
+      display:flex;flex-direction:column;gap:.5rem;align-items:flex-end;
       opacity:0;animation:fadein .9s 2s var(--ease) forwards;
       z-index:2;
     }
@@ -213,199 +165,6 @@
     @keyframes up { to { opacity:1;transform:translateY(0); } }
     @keyframes wup { to { transform:translateY(0); } }
     @keyframes fadein { to { opacity:1; } }
-
-    /* HERO — office info block (replaces "Start a Conversation") */
-    .h-office {
-      display: flex; flex-direction: column; gap: .9rem;
-      margin-top: 2.4rem;
-      opacity: 0; transform: translateY(12px);
-      animation: up .8s 1.6s var(--ease) forwards;
-      max-width: 380px;
-    }
-    .h-office .oi-line {
-      display: flex; align-items: center; gap: .75rem;
-      font-size: .78rem; font-weight: 300; letter-spacing: .04em;
-      color: rgba(255,255,255,.82);
-    }
-    .h-office .oi-line a { color: rgba(255,255,255,.92); border-bottom: 1px solid rgba(255,255,255,.18); padding-bottom: 1px; transition: color .25s, border-color .25s; }
-    .h-office .oi-line a:hover { color: var(--crimson); border-color: var(--crimson); }
-    .h-office .oi-icon {
-      width: 14px; height: 14px; flex-shrink: 0;
-      color: var(--crimson);
-    }
-    .h-office .oi-address { font-size: .74rem; color: rgba(255,255,255,.55); font-weight: 300; letter-spacing: .05em; }
-    .h-socials { display: flex; gap: .7rem; margin-top: .6rem; }
-    .h-socials a {
-      display: inline-flex; align-items: center; justify-content: center;
-      width: 36px; height: 36px; border-radius: 50%;
-      border: 1px solid rgba(255,255,255,.25);
-      color: rgba(255,255,255,.7);
-      transition: all .3s var(--ease);
-    }
-    .h-socials a:hover {
-      background: var(--crimson); border-color: var(--crimson);
-      color: var(--white); transform: translateY(-2px);
-    }
-    .h-socials svg { width: 16px; height: 16px; }
-
-    /* HERO — right-side action cards (Apply, Upload, Map) */
-    .h-right {
-      position: absolute;
-      right: var(--pad);
-      bottom: clamp(3rem, 6vh, 5.5rem);
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      width: clamp(280px, 28vw, 360px);
-      z-index: 3;
-      opacity: 0; transform: translateY(12px);
-      animation: up .8s 1.8s var(--ease) forwards;
-    }
-    .h-card {
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 1rem;
-      padding: 1.1rem 1.3rem;
-      background: rgba(8,8,8,.55);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border: 1px solid rgba(255,255,255,.15);
-      border-left: 3px solid var(--crimson);
-      color: var(--white);
-      transition: all .32s var(--ease);
-      cursor: pointer;
-    }
-    .h-card:hover {
-      background: var(--crimson);
-      border-color: var(--crimson);
-      transform: translateX(-4px);
-      box-shadow: 0 16px 40px rgba(146,17,52,.35);
-    }
-    .h-card .hc-label {
-      font-size: .58rem; font-weight: 400;
-      letter-spacing: .26em; text-transform: uppercase;
-      color: rgba(255,255,255,.55);
-      margin-bottom: .25rem;
-      transition: color .25s;
-    }
-    .h-card:hover .hc-label { color: rgba(255,255,255,.75); }
-    .h-card .hc-title {
-      font-family: var(--font-d);
-      font-size: 1.15rem; font-weight: 400;
-      color: var(--white);
-      line-height: 1.1;
-    }
-    .h-card .hc-title em { font-style: italic; color: var(--crimson); transition: color .25s; }
-    .h-card:hover .hc-title em { color: var(--white); }
-    .h-card .hc-arr {
-      font-size: 1.2rem;
-      color: var(--crimson);
-      transition: transform .3s var(--ease), color .25s;
-    }
-    .h-card:hover .hc-arr { transform: translateX(5px); color: var(--white); }
-
-    /* STANDALONE MAP — sits under office info on the left */
-    .h-map-standalone {
-      position: relative;
-      display: block;
-      overflow: hidden;
-      width: 100%;
-      max-width: 380px;
-      height: 180px;
-      margin-top: 1.2rem;
-      background: rgba(8,8,8,.55);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border: 1px solid rgba(255,255,255,.18);
-      border-left: 3px solid var(--crimson);
-      transition: all .35s var(--ease);
-    }
-    .h-map-standalone:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 16px 40px rgba(146,17,52,.35);
-      border-color: var(--crimson);
-    }
-    .h-map-standalone iframe {
-      position: absolute; inset: 0;
-      width: 100%; height: 100%;
-      border: 0;
-      filter: grayscale(.3) contrast(1.05);
-      transition: filter .4s var(--ease);
-      pointer-events: none;
-    }
-    .h-map-standalone:hover iframe { filter: grayscale(0) contrast(1); }
-    .h-map-standalone .map-label {
-      position: absolute; bottom: 0; left: 0; right: 0;
-      padding: .7rem 1rem;
-      background: linear-gradient(to top, rgba(8,8,8,.9), rgba(8,8,8,.0));
-      color: var(--white);
-      font-size: .58rem;
-      font-weight: 400;
-      letter-spacing: .22em;
-      text-transform: uppercase;
-      display: flex; justify-content: space-between; align-items: center;
-      z-index: 2;
-    }
-    .h-map-standalone .map-label em {
-      font-style: normal;
-      color: var(--crimson);
-      font-size: .78rem;
-      letter-spacing: .02em;
-      text-transform: none;
-      font-family: var(--font-d);
-    }
-
-    /* GLOW — pulsing crimson aura around Apply + Document Upload cards */
-    .h-card-glow {
-      position: relative;
-      box-shadow:
-        0 0 0 0 rgba(146,17,52,.55),
-        0 0 22px 2px rgba(146,17,52,.35),
-        0 0 44px 6px rgba(146,17,52,.18);
-      animation: glowPulse 2.6s ease-in-out infinite;
-    }
-    .h-card-glow.glow-docs {
-      animation-delay: 1.3s; /* stagger so the two cards pulse out of sync */
-    }
-    .h-card-glow::before {
-      content: '';
-      position: absolute;
-      inset: -2px;
-      background: linear-gradient(135deg,
-        rgba(146,17,52,.6) 0%,
-        rgba(146,17,52,0) 40%,
-        rgba(146,17,52,0) 60%,
-        rgba(146,17,52,.6) 100%);
-      z-index: -1;
-      opacity: .55;
-      filter: blur(10px);
-      transition: opacity .35s var(--ease);
-      pointer-events: none;
-    }
-    .h-card-glow:hover::before { opacity: 1; }
-    .h-card-glow:hover {
-      animation-play-state: paused;
-      box-shadow:
-        0 0 0 2px rgba(146,17,52,.8),
-        0 16px 48px rgba(146,17,52,.55),
-        0 0 60px 10px rgba(146,17,52,.35);
-    }
-    @keyframes glowPulse {
-      0%, 100% {
-        box-shadow:
-          0 0 0 0 rgba(146,17,52,.55),
-          0 0 18px 2px rgba(146,17,52,.28),
-          0 0 36px 5px rgba(146,17,52,.14);
-      }
-      50% {
-        box-shadow:
-          0 0 0 2px rgba(146,17,52,.45),
-          0 0 32px 6px rgba(146,17,52,.55),
-          0 0 64px 12px rgba(146,17,52,.32);
-      }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .h-card-glow { animation: none; }
-    }
 
     /* SECTIONS */
     .sec { padding:6.5rem var(--pad); }
@@ -559,326 +318,11 @@
       #cta{grid-template-columns:1fr;}.cr2{text-align:left;}
       .fi{flex-direction:column;align-items:flex-start;}
       .h-strip{display:none;}
-      .h-right{position:static;width:100%;margin-top:2rem;}
-      .hero-content{padding-bottom:2rem;}
-      #hero{height:auto;min-height:100svh;align-items:stretch;flex-direction:column;justify-content:flex-end;}
     }
     @media(max-width:480px){
       h1{font-size:2.5rem;}
       .split-body{padding:2rem;}
-      .h-office{max-width:100%;}
-      .h-map-standalone{max-width:100%;height:160px;}
     }
-
-    /* Custom cursor — mouse only (not on touchscreens) */
-    @media (pointer: fine) {
-      body, button { cursor: none; }
-      #cd, #cr { display: block; }
-    }
-    @media (pointer: coarse) {
-      #cd, #cr { display: none; }
-    }
-
-    
-
-    /* ═══════════════════════════════════════
-       RENTALS SECTION
-    ═══════════════════════════════════════ */
-    #rentals {
-      background: var(--off-white);
-      border-top: 1px solid var(--rule);
-      padding: 6rem var(--pad) 0;
-    }
-    .rentals-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      margin-bottom: 3rem;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-    .rentals-headline {
-      font-family: var(--font-d);
-      font-size: clamp(2rem, 3.8vw, 4rem);
-      font-weight: 400;
-      line-height: 1.1;
-      color: var(--black);
-    }
-    .rentals-headline em { font-style: italic; color: var(--crimson); }
-    .rentals-sub {
-      font-size: .86rem;
-      font-weight: 300;
-      color: var(--ink-lt);
-      line-height: 1.78;
-      max-width: 240px;
-      text-align: right;
-    }
-
-    /* Card grid — Realtor.com-style photo cards */
-    .rentals-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-      margin-bottom: 0;
-    }
-    @media(max-width:1100px){ .rentals-grid { grid-template-columns: repeat(3, 1fr); } }
-    .rcard {
-      background: var(--white);
-      border: 1px solid var(--rule);
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      transition: transform .35s var(--ease), box-shadow .35s var(--ease);
-      overflow: hidden;
-      text-decoration: none;
-      color: inherit;
-    }
-    .rcard:hover { transform: translateY(-4px); box-shadow: 0 20px 50px rgba(0,0,0,.12); }
-    .rcard-photo {
-      position: relative;
-      aspect-ratio: 4/3;
-      overflow: hidden;
-      background: #f0ece8 linear-gradient(135deg, #f5f1ed 25%, #ebe6e0 25%, #ebe6e0 50%, #f5f1ed 50%, #f5f1ed 75%, #ebe6e0 75%);
-      background-size: 30px 30px;
-    }
-    .rcard-photo img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      transition: transform 1s var(--ease);
-    }
-    .rcard:hover .rcard-photo img { transform: scale(1.05); }
-    .rcard-photo .photo-fallback {
-      position: absolute; inset: 0;
-      display: flex; align-items: center; justify-content: center;
-      color: var(--ink-lt);
-      font-size: .62rem; font-weight: 400; letter-spacing: .24em; text-transform: uppercase;
-      background: linear-gradient(135deg, rgba(146,17,52,.06), rgba(146,17,52,.02));
-    }
-    .rcard-photo .price-tag {
-      position: absolute; top: .9rem; left: .9rem;
-      background: var(--crimson); color: var(--white);
-      padding: .4rem .8rem;
-      font-family: var(--font-d);
-      font-size: 1rem; font-weight: 500;
-      letter-spacing: -.01em;
-      box-shadow: 0 6px 16px rgba(146,17,52,.35);
-    }
-    .rcard-photo .status-tag {
-      position: absolute; top: .9rem; right: .9rem;
-      background: rgba(255,255,255,.95);
-      backdrop-filter: blur(8px);
-      color: var(--crimson);
-      padding: .35rem .7rem;
-      font-size: .54rem; font-weight: 500;
-      letter-spacing: .24em; text-transform: uppercase;
-      display: flex; align-items: center; gap: .4rem;
-    }
-    .rcard-photo .status-tag::before {
-      content: ''; width: 5px; height: 5px; border-radius: 50%;
-      background: var(--crimson);
-      animation: pulse 2.2s ease-in-out infinite;
-    }
-    .rcard-photo .status-tag.soon::before { animation: none; background: transparent; border: 1px solid var(--crimson); }
-    .rcard-body {
-      padding: 1.3rem 1.4rem 1.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: .6rem;
-    }
-    .rcard-status {
-      display: none; /* replaced by status-tag in photo */
-      align-items: center;
-      gap: .5rem;
-      font-size: .56rem;
-      font-weight: 400;
-      letter-spacing: .26em;
-      text-transform: uppercase;
-      color: var(--crimson);
-      margin-bottom: 1.2rem;
-    }
-    .rcard-status::before {
-      content: '';
-      width: 5px; height: 5px;
-      border-radius: 50%;
-      background: var(--crimson);
-      flex-shrink: 0;
-      animation: pulse 2.2s ease-in-out infinite;
-    }
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50%       { opacity: .35; }
-    }
-    .rcard-status.soon::before { animation: none; background: transparent; border: 1px solid var(--crimson); }
-
-    .rcard-addr {
-      font-family: var(--font-d);
-      font-size: 1.15rem;
-      font-weight: 500;
-      color: var(--black);
-      line-height: 1.25;
-    }
-    .rcard-city {
-      font-size: .72rem;
-      font-weight: 300;
-      letter-spacing: .04em;
-      color: var(--ink-mid);
-    }
-    .rcard-specs {
-      display: flex;
-      gap: .4rem;
-      flex-wrap: wrap;
-      margin-top: .3rem;
-    }
-    .rcard-spec {
-      font-size: .58rem;
-      font-weight: 400;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      color: var(--ink-mid);
-      background: var(--off-white);
-      padding: .3rem .65rem;
-      border: 1px solid var(--rule);
-    }
-    .rcard:hover .rcard-spec { background: var(--white); border-color: rgba(146,17,52,.15); }
-    .rcard-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-top: .9rem;
-      margin-top: .5rem;
-      border-top: 1px solid var(--rule);
-    }
-    .rcard-price {
-      font-family: var(--font-d);
-      font-size: 1.25rem;
-      font-weight: 500;
-      color: var(--black);
-      letter-spacing: -.01em;
-    }
-    .rcard-price span {
-      font-family: var(--font-b);
-      font-size: .6rem;
-      font-weight: 300;
-      color: var(--ink-lt);
-      letter-spacing: .08em;
-      margin-left: .2rem;
-    }
-    .rcard-cta {
-      font-size: .56rem;
-      font-weight: 500;
-      letter-spacing: .2em;
-      text-transform: uppercase;
-      color: var(--crimson);
-      display: flex;
-      align-items: center;
-      gap: .4rem;
-      transition: gap .25s;
-    }
-    .rcard:hover .rcard-cta { gap: .7rem; }
-
-    /* Browse all row */
-    .rentals-browse {
-      border: 1px solid var(--rule);
-      border-top: none;
-      background: var(--white);
-      padding: 1.1rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      transition: background .25s;
-    }
-    .rentals-browse:hover { background: var(--off-white); }
-    .rentals-browse span {
-      font-size: .62rem;
-      font-weight: 400;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-      color: var(--ink-mid);
-    }
-    .rentals-browse strong {
-      font-family: var(--font-d);
-      font-size: .95rem;
-      font-weight: 400;
-      font-style: italic;
-      color: var(--crimson);
-      display: flex;
-      align-items: center;
-      gap: .5rem;
-      transition: gap .25s;
-    }
-    .rentals-browse:hover strong { gap: .9rem; }
-
-    /* Apply strip */
-    .rentals-apply {
-      background: var(--crimson);
-      margin: 0 calc(-1 * var(--pad));
-      padding: 3.2rem var(--pad);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 2rem;
-      flex-wrap: wrap;
-      margin-top: 3rem;
-    }
-    .ra-left .ra-eyebrow {
-      font-size: .58rem;
-      font-weight: 400;
-      letter-spacing: .28em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,.55);
-      margin-bottom: .5rem;
-    }
-    .ra-left h3 {
-      font-family: var(--font-d);
-      font-size: clamp(1.5rem, 2.8vw, 2.4rem);
-      font-weight: 400;
-      color: var(--white);
-      line-height: 1.15;
-    }
-    .ra-left h3 em { font-style: italic; }
-    .ra-right {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: .8rem;
-      flex-shrink: 0;
-    }
-    .ra-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: .85rem;
-      background: var(--white);
-      color: var(--crimson);
-      font-size: .65rem;
-      font-weight: 500;
-      letter-spacing: .2em;
-      text-transform: uppercase;
-      padding: 1rem 2.2rem;
-      transition: transform .3s var(--ease), box-shadow .3s;
-      white-space: nowrap;
-    }
-    .ra-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(0,0,0,.2); }
-    .ra-btn:hover .arr { transform: translateX(4px); }
-    .ra-note {
-      font-size: .58rem;
-      font-weight: 300;
-      letter-spacing: .1em;
-      color: rgba(255,255,255,.45);
-      text-align: right;
-    }
-
-    /* Mobile */
-    @media(max-width:900px) {
-      .rentals-grid { grid-template-columns: repeat(2, 1fr); }
-      .rentals-sub { text-align: left; max-width: 100%; }
-      .rentals-apply { flex-direction: column; align-items: flex-start; }
-      .ra-right { align-items: flex-start; }
-      .ra-note { text-align: left; }
-    }
-    @media(max-width:540px) {
-      .rentals-grid { grid-template-columns: 1fr; }
-    }
-
     :focus-visible{outline:2px solid var(--crimson);outline-offset:3px;}
     .sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;}}
@@ -890,13 +334,13 @@
 <div id="cr" aria-hidden="true"></div>
 <div id="prog" role="progressbar" aria-label="Page scroll progress"></div>
 
-<div class="drw" id="drw" role="dialog" aria-modal="true" aria-label="Navigation menu">
+<div class="drw" id="drw" role="dialog" aria-modal="true">
   <ul>
     <li><a href="#about" class="dl">About</a></li>
     <li><a href="#services" class="dl">Services</a></li>
     <li><a href="#stats" class="dl">Results</a></li>
-    <li><a href="https://jca619.github.io/CalcV1/" target="_blank" class="dl">Calculator</a></li>
-    <li><a href="#rentals" class="dl">Rentals</a></li>
+    <li><a href="https://jca619.github.io/CalcV1/" class="dl">Calculator</a></li>
+    <li><a href="https://fivergroupdocuments.onrender.com/upload" target="_blank" class="dl">Document Upload</a></li>
     <li><a href="#cta" class="dl">Contact</a></li>
   </ul>
 
@@ -917,8 +361,9 @@
   <li><a href="#about">About</a></li>
   <li><a href="#services">Services</a></li>
   <li><a href="#stats">Results</a></li>
-  <li><a href="#rentals">Rentals</a></li>
-  <li><a href="https://jca619.github.io/CalcV1/" target="_blank">Calculator</a></li>
+  <li><a href="https://jca619.github.io/CalcV1/">Calculator</a></li>
+  <li><a href="https://fivergroupdocuments.onrender.com/upload" target="_blank">Document Upload</a></li>
+  <li><a href="#cta" class="nc">Get Started</a></li>
 </ul>
 
   <button class="hbg" id="hbg" aria-label="Open navigation" aria-expanded="false">
@@ -928,7 +373,7 @@
 
 <!-- HERO — sunset backdrop -->
 <section id="hero" aria-label="5RG Realty hero">
-  <img id="hero-img" class="hero-img" alt="A beautifully managed home at sunset" loading="eager" decoding="async">
+  <img id="hero-img" class="hero-img" alt="A beautifully managed home at sunset" loading="eager">
   <div class="hero-overlay" aria-hidden="true"></div>
 
   <div class="hero-content">
@@ -942,73 +387,11 @@
       <span class="wrd"><span class="wi" style="animation-delay:1.08s">path.</span></span>
     </h1>
     <p class="h-sub">Our group of experts brings over 20 years of local market knowledge — property management, home buying, selling, and beyond.</p>
-
-    <!-- OFFICE INFO (replaces Start a Conversation) -->
-    <div class="h-office" aria-label="5RG Realty office contact">
-      <div class="oi-line">
-        <svg class="oi-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        <a href="tel:6196566100">(619) 656-6100</a>
-        <span style="color:rgba(255,255,255,.3);">·</span>
-        <span style="color:rgba(255,255,255,.5);font-size:.72rem;letter-spacing:.08em;">Office</span>
-      </div>
-      <div class="oi-line">
-        <svg class="oi-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        <a href="mailto:info@5rgroup.com">info@5rgroup.com</a>
-      </div>
-      <div class="oi-line oi-address">
-        <svg class="oi-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:rgba(255,255,255,.45);"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        <span>2449 E. Plaza Blvd. Ste. C &middot; National City, CA 91950</span>
-      </div>
-
-      <!-- SOCIAL ICONS — placeholder hrefs, Jon will update -->
-      <div class="h-socials" aria-label="Social media">
-        <a href="#" aria-label="Facebook" data-social="facebook" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.7c0-.9.3-1.6 1.6-1.6h1.7V3.2c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4H7.4V13h2.7v8h3.4z"/></svg>
-        </a>
-        <a href="#" aria-label="Instagram" data-social="instagram" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg>
-        </a>
-        <a href="#" aria-label="LinkedIn" data-social="linkedin" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.5 8.25a1.75 1.75 0 1 1 0-3.5 1.75 1.75 0 0 1 0 3.5zM5 9.75h3v9.5H5v-9.5zM10 9.75h2.9v1.3h.04c.4-.74 1.4-1.52 2.86-1.52 3.06 0 3.63 2 3.63 4.6v5.12h-3V14.7c0-1.1-.02-2.5-1.52-2.5-1.52 0-1.75 1.18-1.75 2.4v4.65h-3v-9.5z"/></svg>
-        </a>
-        <a href="#" aria-label="Yelp" data-social="yelp" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14.5 3.4l-.3 8.2c0 .6.7 1 1.2.7l4.4-2.6c.4-.3.5-.9.2-1.3-1-1.5-2.7-3-5-4.7-.5-.4-1.5-.1-1.5.7zm-2.8 8.1l-5.6-3.2c-.5-.3-1.1 0-1.3.5-.3 1.3-.5 3.2-.4 5.7 0 .6.6.9 1.1.8l5.8-1.7c.5-.2.7-.9.4-1.3-.2-.3-.4-.6 0-.8zm1.3 3l-3.4 5c-.3.4-.1 1 .4 1.2 1.5.6 3.3.9 5.4.9.6 0 1-.5 1-1l.3-6c0-.5-.5-.9-1-.8-.6.1-1.9.4-2.7.7zm7.3-3l-5.1 1.6c-.5.2-.7.8-.4 1.2l3.8 5.2c.3.4.9.4 1.2.1 1.2-1 2.2-2.5 3-4.4.2-.4 0-1-.4-1.2-.5-.3-1.7-1.2-2.1-2.5zM8.8 14.4l-4-4.5c-.3-.4-1-.3-1.3.1C2.6 11.2 2 12.9 2 15c0 .6.6 1 1.2.9l5.3-.7c.5-.1.7-.8.3-1.2l-.1.4z"/></svg>
-        </a>
-      </div>
-
-      <!-- STANDALONE MAP PREVIEW (moved from right side) -->
-      <a href="https://www.google.com/maps/place/2449+E+Plaza+Blvd+%23C,+National+City,+CA+91950" target="_blank" rel="noopener" class="h-map-standalone" aria-label="View office on Google Maps">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3351.7!2d-117.0773!3d32.6754!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z!5e0!3m2!1sen!2sus!4v1713000000000"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          title="5RG Realty office location map"
-          aria-hidden="true"></iframe>
-        <div class="map-label">
-          <span>Our Office</span>
-          <em>Directions →</em>
-        </div>
-      </a>
+    <div class="h-acts">
+      <a href="#cta" class="bp"><span>Start a Conversation</span><span class="arr" aria-hidden="true">→</span></a>
+      <a href="#services" class="bt">View Services</a>
     </div>
   </div>
-
-  <!-- RIGHT-SIDE HERO ACTION CARDS (Apply + Document Upload only) -->
-  <aside class="h-right" aria-label="Quick actions">
-    <a href="https://5rgrealty.managebuilding.com/Resident/rental-application/new" target="_blank" rel="noopener" class="h-card h-card-glow glow-apply">
-      <div>
-        <div class="hc-label">Apply Here!</div>
-        <div class="hc-title">Start your <em>application</em></div>
-      </div>
-      <span class="hc-arr" aria-hidden="true">→</span>
-    </a>
-    <a href="https://fivergroupdocuments.onrender.com/upload" target="_blank" rel="noopener" class="h-card h-card-glow glow-docs">
-      <div>
-        <div class="hc-label">Document Upload</div>
-        <div class="hc-title">Send us your <em>documents</em></div>
-      </div>
-      <span class="hc-arr" aria-hidden="true">→</span>
-    </a>
-  </aside>
 
   <div class="h-strip" aria-hidden="true">
     <span class="sc">●</span>
@@ -1024,133 +407,12 @@
   </div>
 </section>
 
-<section id="rentals" aria-labelledby="rentals-heading">
-  <div class="rentals-top r">
-    <div>
-      <p class="lbl">Now Leasing</p>
-      <h2 class="rentals-headline" id="rentals-heading">Homes ready<br>for <em>move-in.</em></h2>
-    </div>
-    <p class="rentals-sub">Five carefully managed properties across San Diego County — and beyond. Updated. Responsive. Ready for you.</p>
-  </div>
-
-  <!-- Grid is populated dynamically from listings.json via JS. -->
-  <div class="rentals-grid" id="rentals-grid">
-    <!-- Fallback static cards render if fetch fails. -->
-
-    <a class="rcard r" href="https://5rgrealty.managebuilding.com/Resident/public/rentals/92130" target="_blank" rel="noopener">
-      <div class="rcard-photo">
-        <img src="PREVIEW-RENTALS/HILLTOP.jpeg" alt="1487 Hilltop Dr" loading="lazy" decoding="async">
-        <div class="price-tag">$2,550<span style="font-size:.6rem;font-weight:300;letter-spacing:.08em;margin-left:.2rem;">/mo</span></div>
-        <div class="status-tag">Available</div>
-      </div>
-      <div class="rcard-body">
-        <p class="rcard-addr">1487 Hilltop Dr</p>
-        <p class="rcard-city">Chula Vista, CA 91911</p>
-        <div class="rcard-specs">
-          <span class="rcard-spec">2 Bed</span>
-          <span class="rcard-spec">2 Bath</span>
-          <span class="rcard-spec">680 sqft</span>
-          <span class="rcard-spec">ADU</span>
-        </div>
-        <div class="rcard-footer">
-          <p class="rcard-price">$2,550<span>/ mo</span></p>
-          <span class="rcard-cta">View <span aria-hidden="true">→</span></span>
-        </div>
-      </div>
-    </a>
-
-    <a class="rcard r d1" href="https://5rgrealty.managebuilding.com/Resident/public/home" target="_blank" rel="noopener">
-      <div class="rcard-photo">
-        <img src="PREVIEW-RENTALS/EUCLID.jpeg" alt="2020 Euclid Avenue" loading="lazy" decoding="async">
-        <div class="price-tag">$5,995<span style="font-size:.6rem;font-weight:300;letter-spacing:.08em;margin-left:.2rem;">/mo</span></div>
-        <div class="status-tag">Available</div>
-      </div>
-      <div class="rcard-body">
-        <p class="rcard-addr">2020 Euclid Avenue</p>
-        <p class="rcard-city">National City, CA 91950</p>
-        <div class="rcard-specs">
-          <span class="rcard-spec">6 Bed</span>
-          <span class="rcard-spec">3 Bath</span>
-          <span class="rcard-spec">2,418 sqft</span>
-          <span class="rcard-spec">Estate</span>
-        </div>
-        <div class="rcard-footer">
-          <p class="rcard-price">$5,995<span>/ mo</span></p>
-          <span class="rcard-cta">View <span aria-hidden="true">→</span></span>
-        </div>
-      </div>
-    </a>
-
-    <a class="rcard r d2" href="https://5rgrealty.managebuilding.com/Resident/public/home" target="_blank" rel="noopener">
-      <div class="rcard-photo">
-        <img src="PREVIEW-RENTALS/ARCADIAN.jpeg" alt="3538 Arcadian King Ave" loading="lazy" decoding="async">
-        <div class="price-tag">$1,825<span style="font-size:.6rem;font-weight:300;letter-spacing:.08em;margin-left:.2rem;">/mo</span></div>
-        <div class="status-tag soon">May 1</div>
-      </div>
-      <div class="rcard-body">
-        <p class="rcard-addr">3538 Arcadian King Ave</p>
-        <p class="rcard-city">Las Vegas, NV 89106</p>
-        <div class="rcard-specs">
-          <span class="rcard-spec">3 Bed</span>
-          <span class="rcard-spec">2.5 Bath</span>
-          <span class="rcard-spec">1,208 sqft</span>
-          <span class="rcard-spec">Townhome</span>
-        </div>
-        <div class="rcard-footer">
-          <p class="rcard-price">$1,825<span>/ mo</span></p>
-          <span class="rcard-cta">View <span aria-hidden="true">→</span></span>
-        </div>
-      </div>
-    </a>
-
-    <a class="rcard r d4" href="https://5rgrealty.managebuilding.com/Resident/public/home" target="_blank" rel="noopener">
-      <div class="rcard-photo">
-        <img src="PREVIEW-RENTALS/HONEYSUCKLE.jpeg" alt="418 Honeysuckle Lane" loading="lazy" decoding="async">
-        <div class="price-tag">$1,700<span style="font-size:.6rem;font-weight:300;letter-spacing:.08em;margin-left:.2rem;">/mo</span></div>
-        <div class="status-tag soon">July 1</div>
-      </div>
-      <div class="rcard-body">
-        <p class="rcard-addr">418 Honeysuckle Lane</p>
-        <p class="rcard-city">National City, CA 91950</p>
-        <div class="rcard-specs">
-          <span class="rcard-spec">Studio</span>
-          <span class="rcard-spec">1 Bath</span>
-          <span class="rcard-spec">300 sqft</span>
-        </div>
-        <div class="rcard-footer">
-          <p class="rcard-price">$1,700<span>/ mo</span></p>
-          <span class="rcard-cta">View <span aria-hidden="true">→</span></span>
-        </div>
-      </div>
-    </a>
-
-  </div>
-
-  <a href="https://5rgrealty.managebuilding.com/Resident/public/home" target="_blank" class="rentals-browse r">
-    <span>Browse all available properties</span>
-    <strong>View Full Listings <span aria-hidden="true">→</span></strong>
-  </a>
-
-  <div class="rentals-apply r">
-    <div class="ra-left">
-      <p class="ra-eyebrow">Ready to Apply?</p>
-      <h3>Start your application<br><em>online in minutes.</em></h3>
-    </div>
-    <div class="ra-right">
-      <a href="https://5rgrealty.managebuilding.com/Resident/rental-application/new" target="_blank" class="ra-btn">
-        <span>Apply Now</span><span class="arr" aria-hidden="true">→</span>
-      </a>
-      <p class="ra-note">$30 application fee · Secure &amp; encrypted · Call 619.656.6100</p>
-    </div>
-  </div>
-</section>
-
 <main>
 <!-- ABOUT — kitchen split -->
 <section id="about" class="sec" aria-labelledby="ah">
   <div class="split r">
     <div class="split-img">
-      <img id="kitchen-img" alt="Beautifully maintained open kitchen with vaulted beamed ceilings and hardwood floors" loading="lazy" decoding="async">
+      <img id="kitchen-img" alt="Beautifully maintained open kitchen with vaulted beamed ceilings and hardwood floors" loading="lazy">
       <div class="photo-label">Properties We Manage</div>
     </div>
     <div class="split-body">
@@ -1279,87 +541,6 @@ document.querySelectorAll('.count').forEach(el=>co.observe(el));
 
 // 3D TILT on service rows
 document.querySelectorAll('.si').forEach(row=>{row.addEventListener('mousemove',e=>{const r=row.getBoundingClientRect();row.style.transform='perspective(1200px) rotateY('+(((e.clientX-r.left)/r.width-.5)*2.5)+'deg)';});row.addEventListener('mouseleave',()=>{row.style.transform='';});});
-
-/* ═══════════════════════════════════════════════════════════════════
-   RENTALS — dynamic render from listings.json
-   ═══════════════════════════════════════════════════════════════════
-   To update listings, edit listings.json in the repo root. The grid will
-   re-render automatically on the next page load.
-
-   Expected JSON shape (array of objects):
-   [
-     {
-       "id": 92130,
-       "address": "1487 Hilltop Dr",
-       "city": "Chula Vista, CA 91911",
-       "price": 2550,
-       "bedrooms": "2 Bed",
-       "bathrooms": "2 Bath",
-       "sqft": "680 sqft",
-       "type": "ADU",
-       "status": "Available",           // "Available" | "May 1" | "July 1" etc.
-       "soon": false,                   // true = ring style instead of solid dot
-       "photo": "https://.../1487-hilltop.jpg"  // or null for placeholder
-     }
-   ]
-=================================================================== */
-(function(){
-  const grid = document.getElementById('rentals-grid');
-  if (!grid) return;
-
-  const fmtPrice = (n) => '$' + Number(n).toLocaleString();
-  const esc = (s) => String(s).replace(/[&<>"']/g, c => ({
-    '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
-  }[c]));
-
-  function renderCards(listings){
-    if (!Array.isArray(listings) || !listings.length) return; // keep fallback
-    grid.innerHTML = '';
-    listings.forEach((u, i) => {
-      const href = u.id
-        ? `https://5rgrealty.managebuilding.com/Resident/public/rentals/${encodeURIComponent(u.id)}`
-        : 'https://5rgrealty.managebuilding.com/Resident/public/home';
-      const soonCls = u.soon ? ' soon' : '';
-      const specs = [u.bedrooms, u.bathrooms, u.sqft, u.type].filter(Boolean)
-        .map(s => `<span class="rcard-spec">${esc(s)}</span>`).join('');
-      const photo = u.photo
-        ? `<img src="${esc(u.photo)}" alt="${esc(u.address)}" loading="lazy" decoding="async" onerror="this.style.display='none'">`
-        : `<div class="photo-fallback">Photo coming soon</div>`;
-
-      const card = document.createElement('a');
-      card.className = 'rcard r' + (i > 0 ? ' d' + Math.min(i, 5) : '');
-      card.href = href;
-      card.target = '_blank';
-      card.rel = 'noopener';
-      card.innerHTML = `
-        <div class="rcard-photo">
-          ${photo}
-          <div class="price-tag">${fmtPrice(u.price)}<span style="font-size:.6rem;font-weight:300;letter-spacing:.08em;margin-left:.2rem;">/mo</span></div>
-          <div class="status-tag${soonCls}">${esc(u.status || 'Available')}</div>
-        </div>
-        <div class="rcard-body">
-          <p class="rcard-addr">${esc(u.address)}</p>
-          <p class="rcard-city">${esc(u.city)}</p>
-          <div class="rcard-specs">${specs}</div>
-          <div class="rcard-footer">
-            <p class="rcard-price">${fmtPrice(u.price)}<span>/ mo</span></p>
-            <span class="rcard-cta">View <span aria-hidden="true">→</span></span>
-          </div>
-        </div>`;
-      grid.appendChild(card);
-
-      // re-observe for scroll-in animation
-      if (window.IntersectionObserver) card.classList.add('v');
-    });
-  }
-
-  fetch('listings.json', { cache: 'no-cache' })
-    .then(r => r.ok ? r.json() : Promise.reject('no-listings'))
-    .then(renderCards)
-    .catch(() => {
-      // silent fallback — static cards in HTML already render
-    });
-})();
 </script>
 </body>
 </html>
