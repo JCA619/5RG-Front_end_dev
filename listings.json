@@ -1,0 +1,57 @@
+[
+  {
+    "id": 92130,
+    "address": "1487 Hilltop Dr",
+    "city": "Chula Vista, CA 91911",
+    "price": 2550,
+    "bedrooms": "2 Bed",
+    "bathrooms": "2 Bath",
+    "sqft": "680 sqft",
+    "type": "ADU",
+    "status": "Available",
+    "soon": false,
+    "photo": "PREVIEW-RENTALS/HILLTOP.jpeg"
+  },
+  {
+    "id": null,
+    "address": "2020 Euclid Avenue",
+    "city": "National City, CA 91950",
+    "price": 5995,
+    "bedrooms": "6 Bed",
+    "bathrooms": "3 Bath",
+    "sqft": "2,418 sqft",
+    "type": "Estate",
+    "status": "Available",
+    "soon": false,
+    "photo": "PREVIEW-RENTALS/EUCLID.jpeg",
+    "_comment": "TODO: fill in id (the number at end of /rentals/XXXXX URL)."
+  },
+  {
+    "id": null,
+    "address": "3538 Arcadian King Ave",
+    "city": "Las Vegas, NV 89106",
+    "price": 1825,
+    "bedrooms": "3 Bed",
+    "bathrooms": "2.5 Bath",
+    "sqft": "1,208 sqft",
+    "type": "Townhome",
+    "status": "May 1",
+    "soon": true,
+    "photo": "PREVIEW-RENTALS/ARCADIAN.jpeg",
+    "_comment": "TODO: fill in id."
+  },
+  {
+    "id": null,
+    "address": "418 Honeysuckle Lane",
+    "city": "National City, CA 91950",
+    "price": 1700,
+    "bedrooms": "Studio",
+    "bathrooms": "1 Bath",
+    "sqft": "300 sqft",
+    "type": null,
+    "status": "July 1",
+    "soon": true,
+    "photo": "PREVIEW-RENTALS/HONEYSUCKLE.jpeg",
+    "_comment": "TODO: fill in id."
+  }
+]
